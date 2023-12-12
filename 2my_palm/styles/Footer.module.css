@@ -1,0 +1,153 @@
+.footer {
+  background: var(--highlightedSectionBgColor) 0% 0% no-repeat padding-box;
+}
+
+.container {
+  width: 80%;
+  padding-top: 61px;
+  padding-bottom: 43px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.mainContainer {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--dividerColor);
+  padding-bottom: 91px;
+}
+
+.text {
+  color: var(--secondaryTextColor);
+  font-family: Roboto;
+  font-size: 15px;
+  line-height: 20px;
+  font-weight: 500;
+  letter-spacing: 0px;
+  width: 270px;
+}
+
+.iconsDiv {
+  display: flex;
+  align-items: center;
+}
+.icon {
+  background-color: var(--primaryBackgroundColor);
+  border-radius: 5px;
+  height: 36px;
+  width: 36px;
+  margin-right: 10px;
+}
+.facebookIcon {
+  width: 18px;
+  height: 18px;
+  color: var(--primaryTextColor);
+  margin: 9px 9px;
+}
+
+.twitterIcon {
+  width: 18px;
+  height: 15px;
+  color: var(--primaryTextColor);
+  margin: 11px 9px;
+}
+
+.instagramIcon {
+  width: 18px;
+  height: 18px;
+  color: var(--primaryTextColor);
+  margin: 9px 9px;
+}
+
+.instagramIcon {
+  width: 18px;
+  height: 18px;
+  color: var(--primaryTextColor);
+  margin: 9px 9px;
+}
+
+.linkedinIcon {
+  width: 16px;
+  height: 16px;
+  color: var(--primaryTextColor);
+  margin: 10px 10px;
+}
+
+.title {
+  font-family: Roboto;
+  font-weight: 700;
+  letter-spacing: 0px;
+  color: var(--primaryTextColor);
+  font-size: 20px;
+  line-height: 24px;
+  margin-top: 0px;
+  margin-bottom: 20px;
+}
+
+.link,
+.footerText {
+  text-decoration: none;
+  margin-bottom: 17px;
+  font-family: Roboto;
+  color: var(--secondaryTextColor);
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 0px;
+}
+
+.footerContainer {
+  margin-top: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.downloadSection,
+.appStore,
+.playStore {
+  display: flex;
+  align-items: center;
+}
+
+.appStore,
+.playStore {
+  background-color: var(--primaryBackgroundColor);
+  box-shadow: 0px 3px 6px var(--footerBoxShadowColor);
+  border-radius: 8px;
+  padding: 11px 19px;
+}
+
+.AppleIcon {
+  margin-left: 6px;
+}
+
+.appStore {
+  margin-right: 20px;
+}
+
+.downloadText {
+  color: var(--primaryTextColor);
+  letter-spacing: 0px;
+  font-family: Roboto;
+  font-size: 18px;
+  line-height: 22px;
+  margin: 3px 6px 0px 0px;
+}
+
+.copyrightText {
+  color: var(--secondaryTextColor);
+  font-family: Roboto;
+  font-size: 15px;
+  line-height: 20px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.list {
+  padding: 0px;
+  list-style-type: none;
+}
+
+.list li {
+  margin-bottom: 17px;
+}

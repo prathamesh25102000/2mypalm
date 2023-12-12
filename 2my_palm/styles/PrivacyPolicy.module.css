@@ -1,0 +1,111 @@
+.privacyPlicies {
+  background: var(--highlightedSectionBgColor) 0% 0% no-repeat padding-box;
+  padding-top: 56px;
+}
+
+.container {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  align-items: center;
+}
+
+.mainContent {
+  width: 50%;
+  margin-right: 24px;
+}
+
+.sideImg {
+  width: fit-content;
+}
+
+.heading {
+  font-family: Roboto;
+  color: var(--primaryTextColor);
+  font-weight: 700;
+  font-size: 54px;
+  line-height: 65px;
+  margin-top: 0px;
+  margin-bottom: 11px;
+  letter-spacing: 0px;
+}
+
+.text {
+  color: var(--secondaryTextColor);
+  font-family: Roboto;
+  font-size: 20px;
+  line-height: 30px;
+  margin-top: 0px;
+  font-weight: normal;
+  margin-bottom: 30px;
+}
+
+.textContent {
+  width: 80%;
+  margin: 65px auto 58px auto;
+}
+
+.primaryHeading {
+  color: var(--primaryTextColor);
+  letter-spacing: 0px;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 29px;
+  font-family: Roboto;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.secondaryHeading {
+  color: var(--secondaryTextColor);
+  letter-spacing: 0px;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 20px;
+  font-family: Roboto;
+  margin-left: 38px;
+  margin-top: 12px;
+  margin-bottom: 0px;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+.checkIcon {
+  width: 29px;
+  height: 29px;
+  background: var(--subTitleColor) 0% 0% no-repeat padding-box;
+  color: white;
+  margin-right: 8px;
+  padding: 1px;
+  border-radius: 50%;
+}
+
+.policy {
+  margin-top: 41px;
+}
+
+.footerText {
+  color: var(--secondaryTextColor);
+  letter-spacing: 0px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 30px;
+  font-family: Roboto;
+  margin-bottom: 0px;
+  margin-top: 40px;
+}
+
+.email {
+  color: var(--secondaryTextColor);
+  letter-spacing: 0px;
+  font-weight:900;
+  font-size: 16px;
+  line-height: 20px;
+  font-family: Roboto;
+  margin-top: 12px;
+  margin-bottom: 20px;
+}

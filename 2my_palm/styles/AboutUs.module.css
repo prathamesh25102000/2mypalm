@@ -1,0 +1,47 @@
+.aboutUs {
+  background: var(--highlightedSectionBgColor) 0% 0% no-repeat padding-box;
+  padding-top: 57px;
+}
+
+.container {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  align-items: center;
+}
+
+.mainContent {
+  width: 45%;
+  margin-right: 24px;
+}
+
+.sideImg {
+  width: 45%;
+}
+
+.heading {
+  font-family: Roboto;
+  color: var(--primaryTextColor);
+  font-weight: 700;
+  font-size: 54px;
+  line-height: 65px;
+  margin-top: 0px;
+  margin-bottom: 11px;
+  letter-spacing: 0px;
+}
+
+.text {
+  color: var(--secondaryTextColor);
+  font-family: Roboto;
+  font-size: 20px;
+  line-height: 30px;
+  margin-top: 0px;
+  font-weight: normal;
+  margin-bottom: 30px;
+}
+
+.textContent {
+  width: 80%;
+  margin: 69px auto 50px auto;
+}
