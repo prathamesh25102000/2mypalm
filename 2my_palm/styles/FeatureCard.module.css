@@ -26,3 +26,25 @@
   margin-top: 2px;
   margin-bottom: 0px;
 }
+
+@media (max-width: 468px) {
+  .featureCard {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 19px 22px;
+    border-radius: 15px;
+    margin-bottom: 19px;
+  }
+
+  .title {
+    font-size: 22px;
+    line-height: 27px;
+    margin-top: 0px;
+  }
+
+  .subTitle {
+    font-size: 12px;
+    line-height: 16px;
+  }
+}

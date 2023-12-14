@@ -5,6 +5,7 @@ import AccordionDetails from "@mui/material/AccordionDetails";
 import Typography from "@mui/material/Typography";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import styles from "../styles/Accordion.module.css";
+import { isMobileView } from "@/commons/constants";
 
 interface AccordionProps {
   title: string;
@@ -24,13 +25,17 @@ export default function BasicAccordion({
       setExpanded(isExpanded ? panel : false);
     };
 
+  let isMobileViewViewport: boolean = isMobileView();
+
   const accordionSummaryStyles = {
     backgroundColor:
       expanded === `panel${id.toString()}` ? "#18B5EF" : "#5E5E63",
     borderRadius: "50%",
     color: "white",
+    height: isMobileViewViewport ? 15 : 29,
+    width: isMobileViewViewport ? 15 : 29,
   };
-  
+
   return (
     <div>
       <Accordion
@@ -46,6 +51,7 @@ export default function BasicAccordion({
           expandIcon={<ExpandMoreIcon style={accordionSummaryStyles} />}
           aria-controls={`panel${id.toString()}a-content`}
           id={`panel${id.toString()}a-header`}
+          className={styles.summary}
         >
           <Typography className={styles.title}>{title}</Typography>
         </AccordionSummary>

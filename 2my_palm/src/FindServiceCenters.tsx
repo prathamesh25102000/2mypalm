@@ -2,8 +2,11 @@ import React from "react";
 import findServiceCentersImg from "../assets/find_service_centers_image.png";
 import Image from "next/image";
 import styles from "../styles/FindServiceCenters.module.css";
+import { isMobileView } from "@/commons/constants";
 
 const FindServiceCenters = () => {
+  let isMobileViewPort: boolean = isMobileView();
+
   return (
     <div className={styles.container}>
       <div className={styles.flex}>
@@ -27,7 +30,14 @@ const FindServiceCenters = () => {
             </p>
           </div>
         </div>
-        <Image alt="" src={findServiceCentersImg} height={329} width={472} />
+        <div className={styles.imgDiv}>
+        <Image
+          alt=""
+          src={findServiceCentersImg}
+          height={isMobileViewPort ? 211 : 329}
+          width={isMobileViewPort ? 303 : 472}
+        />
+        </div>
       </div>
     </div>
   );

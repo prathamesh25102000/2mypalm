@@ -22,3 +22,23 @@
   font-weight: normal;
   font-family: Roboto;
 }
+
+.summary{
+  min-height: 20px !important;
+}
+
+@media (max-width:468px) {
+  .title{
+    font-size: 14px;
+    line-height: 17px;
+  }
+
+  .textContent{
+    font-size: 12px;
+    line-height: 14px;
+  }
+
+  .accordion{
+    margin-top: 13px !important;
+  }
+}

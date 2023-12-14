@@ -67,7 +67,57 @@
   margin-bottom: 0px;
 }
 
- .flex2 {
+.flex2 {
   display: flex;
   align-items: center;
+}
+
+@media (max-width: 468px) {
+  .container {
+    width: 100%;
+    margin: 35px 0px 0px 0px;
+  }
+
+  .flex {
+    display: block;
+    border-radius: 0px;
+    padding: 0px;
+  }
+
+  .heading {
+    font-size: 22px;
+    line-height: 25px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+    margin-top: 20px;
+    row-gap: 17px;
+  }
+
+  .innerDiv {
+    padding: 22px 17px;
+  }
+
+  .checkIcon {
+    width: 22px !important;
+    height: 22px !important;
+  }
+
+  .primaryHeading {
+    font-size: 18px;
+    line-height: 22px;
+  }
+
+  .secondaryHeading {
+    font-size: 12px;
+    line-height: 18px;
+    margin-top: 5px;
+  }
+
+  .imgDiv {
+    margin-top: 36px;
+    display: flex;
+    justify-content: center;
+  }
 }

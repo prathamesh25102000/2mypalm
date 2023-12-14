@@ -13,8 +13,10 @@ const FeatureCard = ({ src, title, subTitle, height, width }: CardProps) => {
   return (
     <div className={styles.featureCard}>
       <img alt={title} src={src} height={height} width={width} />
-      <h1 className={styles.title}>{title}</h1>
-      <h5 className={styles.subTitle}>{subTitle}</h5>
+      <div>
+        <h1 className={styles.title}>{title}</h1>
+        <h5 className={styles.subTitle}>{subTitle}</h5>
+      </div>
     </div>
   );
 };

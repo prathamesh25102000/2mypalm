@@ -1,7 +1,9 @@
+import Window from "./windowDimensions";
+
 export const routes = [
   {
     name: "Features",
-    path: "/features",
+    path: "/",
   },
   {
     name: "About Us",
@@ -9,7 +11,7 @@ export const routes = [
   },
   {
     name: "FAQs",
-    path: "/faqs",
+    path: "/",
   },
 ];
 
@@ -47,6 +49,11 @@ export const aboutUSTextLines = [
 ];
 
 export const termsAndConditions = [
+  {
+    title: "Acceptance of Terms",
+    subTitle:
+      "Use of 2MyPalm is subject to acceptance and compliance with these terms and conditions.",
+  },
   {
     title: "User Eligibility",
     subTitle:
@@ -92,84 +99,106 @@ export const termsAndConditions = [
 export const privacyPolicies = [
   {
     title: "Information Collection",
-    subTitle: "We collect essential information to provide you with a seamless experience and improve our services. This may include personal details, device information, and usage patterns.",
+    subTitle:
+      "We collect essential information to provide you with a seamless experience and improve our services. This may include personal details, device information, and usage patterns.",
   },
   {
     title: "Usage of Information",
-    subTitle: "Your data is utilized to personalize your experience, enhance customer support, and optimize our services. We do not sell, trade, or transfer your personally identifiable information to external parties.",
+    subTitle:
+      "Your data is utilized to personalize your experience, enhance customer support, and optimize our services. We do not sell, trade, or transfer your personally identifiable information to external parties.",
   },
   {
     title: "Security Measures",
-    subTitle: "Navigate our intuitive interface with ease to manage and monitor renewal reminders effortlessly.",
+    subTitle:
+      "Navigate our intuitive interface with ease to manage and monitor renewal reminders effortlessly.",
   },
   {
     title: "Third-Party Services",
-    subTitle: "Our app may contain links to third-party websites or services. Please be aware that we are not responsible for their content or privacy practices.",
+    subTitle:
+      "Our app may contain links to third-party websites or services. Please be aware that we are not responsible for their content or privacy practices.",
   },
   {
     title: "Cookies",
-    subTitle: "Cookies may be used to enhance your experience. You can choose to disable cookies, but this may impact certain functionalities.",
+    subTitle:
+      "Cookies may be used to enhance your experience. You can choose to disable cookies, but this may impact certain functionalities.",
   },
   {
     title: "User Control",
-    subTitle: "You have the right to access, correct, or delete your personal information. Contact us for assistance with these requests.",
+    subTitle:
+      "You have the right to access, correct, or delete your personal information. Contact us for assistance with these requests.",
   },
   {
     title: "Policy Updates",
-    subTitle: "Our privacy policy may be updated periodically. We recommend checking this page for the latest information.",
+    subTitle:
+      "Our privacy policy may be updated periodically. We recommend checking this page for the latest information.",
   },
 ];
 
-export const guaranteeFeatures=[
+export const guaranteeFeatures = [
   {
-    title:'Effortless Scheduling',
-    subTitle:'Easily set reminders for guarantee renewal with a few simple clicks.'
+    title: "Effortless Scheduling",
+    subTitle:
+      "Easily set reminders for guarantee renewal with a few simple clicks.",
   },
   {
-    title:'Timely Notifications',
-    subTitle:'Receive timely alerts to ensure you never miss a renewal deadline.'
+    title: "Timely Notifications",
+    subTitle:
+      "Receive timely alerts to ensure you never miss a renewal deadline.",
   },
   {
-    title:'Customizable Options',
-    subTitle: `Tailor reminders to suit your preferences, whether it&apos; days, weeks, or months before expiration.`
+    title: "Customizable Options",
+    subTitle: `Tailor reminders to suit your preferences, whether it&apos; days, weeks, or months before expiration.`,
   },
   {
-    title:'Comprehensive Coverage',
-    subTitle:'Stay on top of guarantee renewals for all your electronic items in one centralized platform.'
+    title: "Comprehensive Coverage",
+    subTitle:
+      "Stay on top of guarantee renewals for all your electronic items in one centralized platform.",
   },
   {
-    title:'User-Friendly Interface',
-    subTitle:'Navigate our intuitive interface with ease to manage and monitor renewal reminders effortlessly.'
+    title: "User-Friendly Interface",
+    subTitle:
+      "Navigate our intuitive interface with ease to manage and monitor renewal reminders effortlessly.",
   },
   {
-    title:'Flexible Reminders',
-    subTitle:'Adjust and modify reminder settings at your convenience to align with your schedule.'
+    title: "Flexible Reminders",
+    subTitle:
+      "Adjust and modify reminder settings at your convenience to align with your schedule.",
   },
-]
+];
 
-export const FAQS=[
+export const FAQS = [
   {
-    question:'How can I download the app?',
-    answer:'An App is a term to describe a web-based program. These web-based or mobile applications perform a specific task for the user. website where one can download these small programs for use on mobile devices such as a Smart phone.'
+    question: "How can I download the app?",
+    answer:
+      "An App is a term to describe a web-based program. These web-based or mobile applications perform a specific task for the user. website where one can download these small programs for use on mobile devices such as a Smart phone.",
   },
   {
-    question:'How can I download the app?',
-    answer:'An App is a term to describe a web-based program. These web-based or mobile applications perform a specific task for the user. website where one can download these small programs for use on mobile devices such as a Smart phone.'
+    question: "How can I download the app?",
+    answer:
+      "An App is a term to describe a web-based program. These web-based or mobile applications perform a specific task for the user. website where one can download these small programs for use on mobile devices such as a Smart phone.",
   },
   {
-    question:'How can I download the app?',
-    answer:'An App is a term to describe a web-based program. These web-based or mobile applications perform a specific task for the user. website where one can download these small programs for use on mobile devices such as a Smart phone.'
+    question: "How can I download the app?",
+    answer:
+      "An App is a term to describe a web-based program. These web-based or mobile applications perform a specific task for the user. website where one can download these small programs for use on mobile devices such as a Smart phone.",
   },
   {
-    question:'How can I download the app?',
-    answer:'An App is a term to describe a web-based program. These web-based or mobile applications perform a specific task for the user. website where one can download these small programs for use on mobile devices such as a Smart phone.'
+    question: "How can I download the app?",
+    answer:
+      "An App is a term to describe a web-based program. These web-based or mobile applications perform a specific task for the user. website where one can download these small programs for use on mobile devices such as a Smart phone.",
   },
   {
-    question:'How can I download the app?',
-    answer:'An App is a term to describe a web-based program. These web-based or mobile applications perform a specific task for the user. website where one can download these small programs for use on mobile devices such as a Smart phone.'
+    question: "How can I download the app?",
+    answer:
+      "An App is a term to describe a web-based program. These web-based or mobile applications perform a specific task for the user. website where one can download these small programs for use on mobile devices such as a Smart phone.",
   },
   {
-    question:'How can I download the app?',
-    answer:'An App is a term to describe a web-based program. These web-based or mobile applications perform a specific task for the user. website where one can download these small programs for use on mobile devices such as a Smart phone.'
+    question: "How can I download the app?",
+    answer:
+      "An App is a term to describe a web-based program. These web-based or mobile applications perform a specific task for the user. website where one can download these small programs for use on mobile devices such as a Smart phone.",
   },
-]
+];
+
+export const isMobileView = () => {
+  return Window().width < 469 ? true : false;
+};

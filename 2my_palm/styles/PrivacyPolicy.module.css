@@ -102,10 +102,84 @@
 .email {
   color: var(--secondaryTextColor);
   letter-spacing: 0px;
-  font-weight:900;
+  font-weight: 900;
   font-size: 16px;
   line-height: 20px;
   font-family: Roboto;
   margin-top: 12px;
   margin-bottom: 20px;
+}
+
+@media (max-width: 468px) {
+  .heading {
+    font-size: 28px;
+    line-height: 34px;
+    margin-bottom: 8px;
+  }
+
+  .text {
+    font-size: 12px;
+    line-height: 16px;
+    margin-bottom: 18px;
+  }
+
+  .sideImg {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .container {
+    display: block;
+    width: 100%;
+  }
+
+  .mainContent {
+    width: 100%;
+    margin-right: 0px;
+  }
+
+  .textContent {
+    width: 100%;
+    margin-top: 25px;
+    margin-bottom: 26px;
+  }
+
+  .textContentDiv {
+    padding-left: 17px;
+    padding-right: 17px;
+  }
+
+  .privacyPlicies {
+    padding: 38px 17px 0px 17px;
+  }
+
+  .primaryHeading {
+    font-size: 18px;
+    line-height: 22px;
+  }
+
+  .secondaryHeading {
+    margin-top: 5px;
+    font-size: 12px;
+    line-height: 25px;
+    text-align: justify;
+    text-justify: inter-word;
+    margin-left: 28px;
+  }
+
+  .checkIcon {
+    height: 20px;
+    width: 20px;
+  }
+
+  .policy{
+    margin-top: 20px;
+  }
+
+  .footerText, .email{
+    font-size: 12px;
+    line-height: 18px;
+    margin-top: 14px;
+  }
 }

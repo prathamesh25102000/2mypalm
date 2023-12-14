@@ -13,23 +13,26 @@ import ManageYourAssets from "@/src/ManageYourAssets";
 import FindServiceCenters from "@/src/FindServiceCenters";
 import GuaranteeRenewal from "@/src/GuaranteeRenewal";
 import FAQs from "@/src/FAQs";
+import { isMobileView } from "@/commons/constants";
 
 export default function Home() {
+  let isMobileViewport: boolean = isMobileView();
+
   const FeatureCard = (props: any) => {
     const { icon, height, width, textContent } = props;
 
     return (
       <div className={styles.featureCard}>
-        <div className={styles.iconDiv}>
-          <Image
-            alt="icon"
-            src={icon}
-            height={height}
-            width={width}
-            className={styles.icon}
-          />
-        </div>
         <div className={styles.textContent}>
+          <div className={styles.iconDiv}>
+            <Image
+              alt="icon"
+              src={icon}
+              height={height}
+              width={width}
+              className={styles.icon}
+            />
+          </div>
           <p className={styles.cardText}>{textContent}</p>
         </div>
       </div>
@@ -48,37 +51,40 @@ export default function Home() {
               <h2 className={styles.heading1}>Why Choose 2MyPalm?</h2>
               <p className={styles.text}>
                 Revolutionize the way you own and interact with your electronic
-                companions. 2mypalm isn&apos;t just an app; it&apos;s a lifestyle upgrade.
-                From seamless asset tracking to timely warranty reminders,
-                discover the reasons to make 2mypalm your digital ally.
+                companions. 2mypalm isn&apos;t just an app; it&apos;s a
+                lifestyle upgrade. From seamless asset tracking to timely
+                warranty reminders, discover the reasons to make 2mypalm your
+                digital ally.
               </p>
               <div className={styles.grid}>
                 <FeatureCard
                   icon={assetsIcon}
-                  height={52}
-                  width={52}
+                  height={isMobileViewport ? 26 : 52}
+                  width={isMobileViewport ? 26 : 52}
                   textContent={"Manage Your Assets"}
                 />
                 <FeatureCard
                   icon={serviceCentersIcon}
-                  height={50}
-                  width={42}
+                  height={isMobileViewport ? 25 : 50}
+                  width={isMobileViewport ? 21 : 42}
                   textContent={"Find Service Centres"}
                 />
                 <FeatureCard
                   icon={bellIcon}
-                  height={43}
-                  width={40}
+                  height={isMobileViewport ? 22 : 43}
+                  width={isMobileViewport ? 20 : 40}
                   textContent={"Set Reminders for Guarantee Renewal"}
                 />
               </div>
             </div>
-            <Image
-              alt="why_choose_2mypalm"
-              src={whyChhose2myPalmSectionImg}
-              height={424}
-              width={477}
-            />
+            <div className={styles.imgDiv}>
+              <Image
+                alt="why_choose_2mypalm"
+                src={whyChhose2myPalmSectionImg}
+                height={isMobileViewport ? 256 : 424}
+                width={isMobileViewport ? 287 : 477}
+              />
+            </div>
           </div>
         </div>
         <ManageYourAssets />

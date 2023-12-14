@@ -48,3 +48,10 @@
   line-height: 18px;
   font-weight: 500;
 }
+
+.mobileHeader{
+  padding: 20px 17px 0px 17px;
+  display: flex;
+  justify-content: space-between;
+  background: var(--highlightedSectionBgColor) 0% 0% no-repeat padding-box;
+}

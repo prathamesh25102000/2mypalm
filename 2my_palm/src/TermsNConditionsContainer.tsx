@@ -2,8 +2,11 @@ import React from "react";
 import img from "../assets/terms&conditions.png";
 import Image from "next/image";
 import styles from "../styles/TermsNConditions.module.css";
+import { isMobileView } from "@/commons/constants";
 
 const TermsNConditionsContainer = () => {
+  let isMobileViewport: boolean = isMobileView();
+
   return (
     <div className={styles.termsNConditions}>
       <div className={styles.container}>
@@ -19,12 +22,13 @@ const TermsNConditionsContainer = () => {
             and above, or with the consent of a legal guardian.
           </p>
         </div>
-        <div className={styles.sideImg}>
+        <div className={styles.sideImgDiv}>
           <Image
             alt="terms_&_conditions_image"
             src={img}
-            height={415}
-            width={564}
+            height={isMobileViewport ? 219 : 415}
+            width={isMobileViewport ? 313 : 564}
+            className={styles.sideImg}
           />
         </div>
       </div>

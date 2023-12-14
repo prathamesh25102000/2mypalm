@@ -5,6 +5,7 @@
 
 .flex {
   display: flex;
+  align-items: center;
 }
 
 .heading {
@@ -30,4 +31,39 @@
 .mainContent {
   margin-top: 21px;
   margin-right: 31px;
+}
+
+@media (max-width: 468px) {
+  .container {
+    width: 100%;
+    margin-top: 31px;
+  }
+  .heading {
+    font-size: 22px;
+    line-height: 27px;
+  }
+
+  .mainContent {
+    width: 100%;
+    margin-top: 8px;
+  }
+
+  .secondaryText {
+    font-size: 12px;
+    line-height: 18px;
+    margin-top: 0px;
+    margin-bottom: 15px;
+  }
+
+  .flex {
+    display: block;
+    padding-left: 17px;
+    padding-right: 17px;
+  }
+
+  .imgDiv {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
 }

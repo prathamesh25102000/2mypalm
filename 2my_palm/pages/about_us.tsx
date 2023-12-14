@@ -9,12 +9,14 @@ export default function AboutUs() {
     <>
       <Header />
       <AboutUsContainer />
-      <div className={styles.textContent}>
-        {aboutUSTextLines.map((text: string, i: number) => (
-          <p key={i} className={styles.text}>
-            {text}
-          </p>
-        ))}
+      <div className={styles.textContentDiv}>
+        <div className={styles.textContent}>
+          {aboutUSTextLines.map((text: string, i: number) => (
+            <p key={i} className={styles.text}>
+              {text}
+            </p>
+          ))}
+        </div>
       </div>
       <Footer />
     </>

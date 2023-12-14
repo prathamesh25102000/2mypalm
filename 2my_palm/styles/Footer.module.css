@@ -24,7 +24,6 @@
   line-height: 20px;
   font-weight: 500;
   letter-spacing: 0px;
-  width: 270px;
 }
 
 .iconsDiv {
@@ -118,7 +117,7 @@
 }
 
 .AppleIcon {
-  margin-left: 6px;
+  margin-right: 6px;
 }
 
 .appStore {
@@ -150,4 +149,70 @@
 
 .list li {
   margin-bottom: 17px;
+}
+
+@media (max-width: 468px) {
+  .mainContainer {
+    display: block;
+    padding-bottom: 0px;
+    border-bottom: none;
+  }
+
+  .container {
+    width: 100%;
+    padding-top: 34px;
+    padding-bottom: 19px;
+  }
+
+  .text {
+    font-size: 12px;
+    line-height: 17px;
+    margin-top: 13px;
+    margin-bottom: 0px;
+  }
+
+  .iconsDiv {
+    margin-top: 21px;
+    margin-bottom: 0px;
+  }
+
+  .title {
+    font-size: 18px;
+    line-height: 22px;
+    margin-top: 33px;
+  }
+
+  .downloadText {
+    line-height: 13px;
+    font-size: 10px;
+  }
+
+  .appStore {
+    padding: 7px 17px;
+  }
+
+  .footerContainer {
+    padding-bottom: 18px;
+    border-bottom: 1px solid var(--dividerColor);
+  }
+
+  .copyrightText {
+    line-height: 13px;
+    font-size: 10px;
+    text-align: center;
+    margin-top: 15px;
+  }
+
+  .footer {
+    padding-left: 17px;
+    padding-right: 17px;
+  }
+
+  .playStoreIcon {
+    margin-right: 6px;
+  }
+
+  .playStore{
+    padding: 10px 11px;
+  }
 }

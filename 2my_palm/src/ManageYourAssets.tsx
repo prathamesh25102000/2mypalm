@@ -2,18 +2,23 @@ import React from "react";
 import manageYourAssetsImg from "../assets/manage_your_assets_image.png";
 import styles from "../styles/ManageAssets.module.css";
 import Image from "next/image";
+import { isMobileView } from "@/commons/constants";
 
 const ManageYourAssets = () => {
+  let isDesktopViewport: boolean = !isMobileView();
+
   return (
     <div className={styles.container}>
       <div className={styles.flex}>
-        <Image
-          alt=""
-          src={manageYourAssetsImg}
-          width={418}
-          height={505}
-          className={styles.img}
-        />
+        {isDesktopViewport && (
+          <Image
+            alt=""
+            src={manageYourAssetsImg}
+            width={418}
+            height={505}
+            className={styles.img}
+          />
+        )}
         <div className={styles.textContent}>
           <h1 className={styles.heading}>Manage Your Assets</h1>
           <div className={styles.secondaryContent}>
@@ -33,6 +38,17 @@ const ManageYourAssets = () => {
             </p>
           </div>
         </div>
+        {!isDesktopViewport && (
+          <div className={styles.imgDiv}>
+          <Image
+            alt=""
+            src={manageYourAssetsImg}
+            width={262}
+            height={317}
+            className={styles.img}
+          />
+          </div>
+        )}
       </div>
     </div>
   );

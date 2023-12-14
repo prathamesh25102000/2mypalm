@@ -7,10 +7,12 @@ import { privacyPolicies } from "@/commons/constants";
 import styles from "../styles/PrivacyPolicy.module.css";
 
 export default function PrivacyPloicy() {
+
   return (
     <>
       <Header />
       <PrivacyPolicyContainer />
+      <div className={styles.textContentDiv}>
       <div className={styles.textContent}>
         {privacyPolicies?.map((item: any, i: number) => (
           <div key={i} className={styles.policy}>
@@ -29,6 +31,7 @@ export default function PrivacyPloicy() {
         <p className={styles.footerText}>
           Thank you for trusting 2MyPalm with your data security and privacy.
         </p>
+      </div>
       </div>
       <Footer />
     </>

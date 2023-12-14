@@ -2,8 +2,11 @@ import React from "react";
 import aboutUsImg from "../assets/about_us_img.png";
 import styles from "../styles/AboutUs.module.css";
 import Image from "next/image";
+import { isMobileView } from "@/commons/constants";
 
 const AboutUsContainer = () => {
+  let isMobileViewport: boolean = isMobileView();
+
   return (
     <div className={styles.aboutUs}>
       <div className={styles.container}>
@@ -23,8 +26,8 @@ const AboutUsContainer = () => {
           <Image
             alt="about_us_image"
             src={aboutUsImg}
-            height={464}
-            width={585}
+            height={isMobileViewport ? 231 : 464}
+            width={isMobileViewport ? 316 : 585}
           />
         </div>
       </div>
