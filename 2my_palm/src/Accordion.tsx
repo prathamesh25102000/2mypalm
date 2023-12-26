@@ -6,6 +6,7 @@ import Typography from "@mui/material/Typography";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import styles from "../styles/Accordion.module.css";
 import { isMobileView } from "@/commons/constants";
+import { Colors } from "@/commons/Colors";
 
 interface AccordionProps {
   title: string;
@@ -29,7 +30,9 @@ export default function BasicAccordion({
 
   const accordionSummaryStyles = {
     backgroundColor:
-      expanded === `panel${id.toString()}` ? "#18B5EF" : "#5E5E63",
+      expanded === `panel${id.toString()}`
+        ? Colors.expandedAccordionColor
+        : Colors.collapsedAccordionColor,
     borderRadius: "50%",
     color: "white",
     height: isMobileViewViewport ? 15 : 29,
@@ -44,7 +47,9 @@ export default function BasicAccordion({
         onChange={handleChange(`panel${id.toString()}`)}
         style={{
           borderColor:
-            expanded === `panel${id.toString()}` ? "#18B5EF" : "#5E5E63",
+            expanded === `panel${id.toString()}`
+              ? Colors.expandedAccordionColor
+              : Colors.collapsedAccordionColor,
         }}
       >
         <AccordionSummary

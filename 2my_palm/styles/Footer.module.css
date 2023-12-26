@@ -151,6 +151,9 @@
   margin-bottom: 17px;
 }
 
+.playStoreIcon{
+  margin-right: 8px;
+}
 @media (max-width: 468px) {
   .mainContainer {
     display: block;

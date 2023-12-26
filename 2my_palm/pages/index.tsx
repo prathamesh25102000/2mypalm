@@ -3,7 +3,7 @@ import styles from "@/styles/Home.module.css";
 import Header from "@/src/Header";
 import Footer from "@/src/Footer";
 import Image from "next/image";
-import whyChhose2myPalmSectionImg from "../assets/why_choose_2mypalm_img.svg";
+import whyChoose2myPalmSectionImg from "../assets/why_choose_2mypalm_img.svg";
 import WelcomeContainer from "@/src/WelcomeContainer";
 import FeaturesSection from "@/src/FeaturesSection";
 import ManageYourAssets from "@/src/ManageYourAssets";
@@ -11,14 +11,40 @@ import FindServiceCenters from "@/src/FindServiceCenters";
 import GuaranteeRenewal from "@/src/GuaranteeRenewal";
 import FAQs from "@/src/FAQs";
 import { isMobileView } from "@/commons/constants";
-import { featurecardsData } from "@/commons/constants";
+import assetsIcon from "@/assets/manage_assets_icon.svg";
+import serviceCentersIcon from "@/assets/service_centers_icon.svg";
+import bellIcon from "@/assets/bell_icon.svg";
+
+interface CardProps {
+  icon: any;
+  height: number;
+  width: number;
+  textContent: string;
+}
 
 export default function Home() {
   let isMobileViewport: boolean = isMobileView();
-
-  const FeatureCard = (props: any) => {
-    const { icon, height, width, textContent } = props;
-
+  const featurecardsData = [
+    {
+      icon: assetsIcon,
+      height: isMobileViewport ? 26 : 52,
+      width: isMobileViewport ? 26 : 52,
+      textContent: "Manage Your Assets",
+    },
+    {
+      icon: serviceCentersIcon,
+      height: isMobileViewport ? 25 : 50,
+      width: isMobileViewport ? 21 : 42,
+      textContent: "Find Service Centres",
+    },
+    {
+      icon: bellIcon,
+      height: isMobileViewport ? 22 : 43,
+      width: isMobileViewport ? 20 : 40,
+      textContent: "Set Reminders for Guarantee Renewal",
+    },
+  ];
+  const FeatureCard = ({ icon, height, width, textContent }: CardProps) => {
     return (
       <div className={styles.featureCard}>
         <div className={styles.textContent}>
@@ -61,6 +87,7 @@ export default function Home() {
                     height={item?.height || 0}
                     width={item?.width || 0}
                     textContent={item?.textContent || ""}
+                    key={ind}
                   />
                 ))}
               </div>
@@ -68,7 +95,7 @@ export default function Home() {
             <div className={styles.imgDiv}>
               <Image
                 alt="why_choose_2mypalm"
-                src={whyChhose2myPalmSectionImg}
+                src={whyChoose2myPalmSectionImg}
                 height={isMobileViewport ? 256 : 424}
                 width={isMobileViewport ? 287 : 477}
               />

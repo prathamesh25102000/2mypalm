@@ -4,8 +4,7 @@ import styles from "../styles/Features.module.css";
 import { isMobileView } from "@/commons/constants";
 
 const FeaturesSection = () => {
-  let isMobileViewport: boolean = isMobileView();
-
+  let isMobileViewport:boolean=isMobileView();
   const features = [
     {
       title: "20000",
