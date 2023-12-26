@@ -4,9 +4,6 @@ import Header from "@/src/Header";
 import Footer from "@/src/Footer";
 import Image from "next/image";
 import whyChhose2myPalmSectionImg from "../assets/why_choose_2mypalm_img.svg";
-import bellIcon from "../assets/bell_icon.svg";
-import assetsIcon from "../assets/manage_assets_icon.svg";
-import serviceCentersIcon from "../assets/service_centers_icon.svg";
 import WelcomeContainer from "@/src/WelcomeContainer";
 import FeaturesSection from "@/src/FeaturesSection";
 import ManageYourAssets from "@/src/ManageYourAssets";
@@ -14,6 +11,7 @@ import FindServiceCenters from "@/src/FindServiceCenters";
 import GuaranteeRenewal from "@/src/GuaranteeRenewal";
 import FAQs from "@/src/FAQs";
 import { isMobileView } from "@/commons/constants";
+import { featurecardsData } from "@/commons/constants";
 
 export default function Home() {
   let isMobileViewport: boolean = isMobileView();
@@ -57,24 +55,14 @@ export default function Home() {
                 digital ally.
               </p>
               <div className={styles.grid}>
-                <FeatureCard
-                  icon={assetsIcon}
-                  height={isMobileViewport ? 26 : 52}
-                  width={isMobileViewport ? 26 : 52}
-                  textContent={"Manage Your Assets"}
-                />
-                <FeatureCard
-                  icon={serviceCentersIcon}
-                  height={isMobileViewport ? 25 : 50}
-                  width={isMobileViewport ? 21 : 42}
-                  textContent={"Find Service Centres"}
-                />
-                <FeatureCard
-                  icon={bellIcon}
-                  height={isMobileViewport ? 22 : 43}
-                  width={isMobileViewport ? 20 : 40}
-                  textContent={"Set Reminders for Guarantee Renewal"}
-                />
+                {featurecardsData.map((item: any, ind: number) => (
+                  <FeatureCard
+                    icon={item.icon}
+                    height={item?.height || 0}
+                    width={item?.width || 0}
+                    textContent={item?.textContent || ""}
+                  />
+                ))}
               </div>
             </div>
             <div className={styles.imgDiv}>

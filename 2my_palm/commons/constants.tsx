@@ -1,5 +1,7 @@
 import Window from "./windowDimensions";
-
+import assetsIcon from "../assets/manage_assets_icon.svg";
+import serviceCentersIcon from "../assets/service_centers_icon.svg";
+import bellIcon from "../assets/bell_icon.svg";
 export const routes = [
   {
     name: "Features",
@@ -202,3 +204,24 @@ export const FAQS = [
 export const isMobileView = () => {
   return Window().width < 469 ? true : false;
 };
+
+export const featurecardsData = [
+  {
+    icon: { assetsIcon },
+    height: isMobileView() ? 26 : 52,
+    width: isMobileView() ? 26 : 52,
+    textContent: "Manage Your Assets",
+  },
+  {
+    icon: { serviceCentersIcon },
+    height: isMobileView() ? 25 : 50,
+    width: isMobileView() ? 21 : 42,
+    textContent: "Find Service Centres",
+  },
+  {
+    icon: { bellIcon },
+    height: isMobileView() ? 22 : 43,
+    width: isMobileView() ? 20 : 40,
+    textContent: "Set Reminders for Guarantee Renewal",
+  },
+];
