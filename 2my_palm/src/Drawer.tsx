@@ -10,6 +10,8 @@ import styles from "../styles/Drawer.module.css";
 import MenuIcon from "@mui/icons-material/Menu";
 import Link from "next/link";
 import CloseIcon from "@mui/icons-material/Close";
+import { logAnalyticsEvent } from "@/analytics";
+import { routes } from "@/commons/constants";
 
 type Anchor = "right";
 
@@ -44,11 +46,17 @@ export default function MUIDrawer() {
       </button>
       <List>
         <button className={styles.downloadBtn}>Download</button>
-        {["Features", "About us", "FAQs"].map((text, index) => (
-          <ListItem key={text} disablePadding className={styles.ListItem}>
+        {routes.map((item: any, index: number) => (
+          <ListItem key={index} disablePadding className={styles.ListItem}>
             <ListItemButton>
-              <Link href={"/about_us"} className={styles.link}>
-                <ListItemText primary={text} />
+              <Link
+                href={item?.path || "/"}
+                className={styles.link}
+                onClick={() =>
+                  logAnalyticsEvent("pageView", { route: item?.name || "" })
+                }
+              >
+                <ListItemText primary={item?.name || ""} />
               </Link>
             </ListItemButton>
           </ListItem>
@@ -64,10 +72,7 @@ export default function MUIDrawer() {
           <Button onClick={toggleDrawer(anchor, true)} className={styles.btn}>
             <MenuIcon />
           </Button>
-          <Drawer
-            anchor={anchor}
-            open={state[anchor]}
-          >
+          <Drawer anchor={anchor} open={state[anchor]}>
             {list(anchor)}
           </Drawer>
         </React.Fragment>

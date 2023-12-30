@@ -11,6 +11,7 @@ import Link from "next/link";
 import AppleIcon from "@mui/icons-material/Apple";
 import { isMobileView } from "@/commons/constants";
 import playStoreIcon from "../assets/playStore_icon.svg";
+import { logAnalyticsEvent } from "@/analytics";
 
 const Footer = () => {
   let isMobileViewport: boolean = isMobileView();
@@ -46,7 +47,15 @@ const Footer = () => {
               <ul className={styles.list}>
                 {companySectionLinks.map((item: any, i: number) => (
                   <li key={i}>
-                    <Link href={item?.path} className={styles.link}>
+                    <Link
+                      href={item?.path || "/"}
+                      className={styles.link}
+                      onClick={() =>
+                        logAnalyticsEvent("pageView", {
+                          route: item?.name || "/",
+                        })
+                      }
+                    >
                       {item?.name || ""}
                     </Link>
                   </li>
@@ -67,7 +76,13 @@ const Footer = () => {
                 <p className={styles.downloadText}>Download for iOS</p>
               </div>
               <div className={styles.playStore}>
-                <Image src={playStoreIcon} alt={""} height={18} width={16} className={styles.playStoreIcon}/>
+                <Image
+                  src={playStoreIcon}
+                  alt={""}
+                  height={18}
+                  width={16}
+                  className={styles.playStoreIcon}
+                />
                 <p className={styles.downloadText}>Download for Android</p>
               </div>
             </div>

@@ -7,7 +7,6 @@ import Window from "@/commons/windowDimensions";
 
 const WelcomeContainer = () => {
   let isMobileViewport: boolean = isMobileView();
-  console.log(Window().width);
 
   return (
     <div className={styles.welcomeContainer}>

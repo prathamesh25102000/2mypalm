@@ -47,9 +47,10 @@
   font-size: 15px;
   line-height: 18px;
   font-weight: 500;
+  cursor: pointer;
 }
 
-.mobileHeader{
+.mobileHeader {
   padding: 20px 17px 0px 17px;
   display: flex;
   justify-content: space-between;

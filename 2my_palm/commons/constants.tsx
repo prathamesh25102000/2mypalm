@@ -1,6 +1,5 @@
 import Window from "./windowDimensions";
 
-
 export const routes = [
   {
     name: "Features",
@@ -204,3 +203,9 @@ export const isMobileView = () => {
   return Window().width < 469 ? true : false;
 };
 
+export const getPageTitle = (route: string) => {
+  const pathArray = route.split("/");
+  const len = pathArray.length;
+  let currentPage: string = pathArray[len - 1];
+  return route === "/" ? "Home" : currentPage;
+};
