@@ -126,6 +126,35 @@
   letter-spacing: 0px;
 }
 
+@media (max-width:1400px) {
+  .choose2MyPalmContainer{
+    width: 53%;
+  }
+
+  .grid{
+    grid-template-columns: auto;
+  }
+}
+
+@media (max-width:1400px) {
+  .mainContent{
+    width: 55%;
+  }
+
+  .innerContainer{
+    align-items: center;
+  }
+}
+
+@media (max-width:1050px) and (min-width:469px) {
+  .innerContainer{
+    width:100%;
+    padding-left: 17px;
+    padding-right: 17px;
+  }
+
+}
+
 @media (max-width: 468px) {
   .subTitle {
     font-size: 11px;
@@ -226,3 +255,4 @@
     border-radius: 8px;
   }
 }
+
