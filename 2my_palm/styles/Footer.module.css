@@ -154,6 +154,40 @@
 .playStoreIcon{
   margin-right: 8px;
 }
+
+@media (max-width:1150px) {
+  .innerContainer{
+    width:38%;
+  }
+
+}
+
+@media (max-width:1050px) and (min-width:469px) {
+  .container{
+    width:100%;
+  }
+
+  .mainContainer, .footerContainer{
+    padding-left: 17px;
+    padding-right: 17px;
+  }
+}
+
+@media (max-width:850px) and (min-width:469px) {
+  .footerContainer{
+    display: block;
+  }
+
+  .copyrightText{
+    text-align: center;
+    margin-top: 15px;
+  }
+
+  .downloadSection{
+    justify-content: center;
+  }
+}
+
 @media (max-width: 468px) {
   .mainContainer {
     display: block;
@@ -219,3 +253,4 @@
     padding: 10px 11px;
   }
 }
+
