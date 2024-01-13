@@ -56,3 +56,14 @@
   justify-content: space-between;
   background: var(--highlightedSectionBgColor) 0% 0% no-repeat padding-box;
 }
+
+@media (max-width:1050px) {
+  .header{
+    width: 100%;
+  }
+
+  .headerContainer{
+    padding-left: 17px;
+    padding-right: 17px;
+  }
+}
