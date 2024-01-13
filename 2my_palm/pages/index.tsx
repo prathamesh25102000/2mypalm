@@ -24,6 +24,7 @@ interface CardProps {
 
 export default function Home() {
   let isMobileViewport: boolean = isMobileView();
+
   const featurecardsData = [
     {
       icon: assetsIcon,
@@ -44,6 +45,7 @@ export default function Home() {
       textContent: "Set Reminders for Guarantee Renewal",
     },
   ];
+
   const FeatureCard = ({ icon, height, width, textContent }: CardProps) => {
     return (
       <div className={styles.featureCard}>
@@ -71,7 +73,7 @@ export default function Home() {
         <FeaturesSection />
         <div className={styles.myPalmContainer}>
           <div className={styles.flex}>
-            <div>
+            <div className={styles.choose2MyPalmContainer}>
               <h2 className={styles.heading1}>Why Choose 2MyPalm?</h2>
               <p className={styles.text}>
                 Revolutionize the way you own and interact with your electronic
@@ -101,8 +103,8 @@ export default function Home() {
               />
             </div>
           </div>
-        </div>
-        <ManageYourAssets />
+        </div> */}
+        {/* <ManageYourAssets />
         <FindServiceCenters />
         <GuaranteeRenewal />
         <FAQs />
@@ -111,3 +113,4 @@ export default function Home() {
     </>
   );
 }
+
