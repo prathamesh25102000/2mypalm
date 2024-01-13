@@ -7,6 +7,7 @@ import Window from "@/commons/windowDimensions";
 
 const WelcomeContainer = () => {
   let isMobileViewport: boolean = isMobileView();
+  let isTabViewport: boolean = Window().width < 1400;
 
   return (
     <div className={styles.welcomeContainer}>
@@ -24,8 +25,8 @@ const WelcomeContainer = () => {
           <Image
             alt="welcome to 2myPalm image"
             src={homeImg}
-            height={isMobileViewport ? 281 : 471}
-            width={isMobileViewport ? 357 : 595}
+            height={isMobileViewport ? 281 : isTabViewport ? 330 : 471}
+            width={isMobileViewport ? 357 : isTabViewport ? 417 : 595}
             className={styles.welcomeImg}
           />
         </div>
@@ -35,3 +36,4 @@ const WelcomeContainer = () => {
 };
 
 export default WelcomeContainer;
+
