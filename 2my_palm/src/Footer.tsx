@@ -21,7 +21,7 @@ const Footer = () => {
       <div className={styles.footer}>
         <div className={styles.container}>
           <div className={styles.mainContainer}>
-            <div>
+            <div className={styles.innerContainer}>
               <Image alt="logo" src={logo} width={102} height={28} />
               <p className={styles.text}>
                 Welcome to 2MyPalm, where we bring peace of mind to electronic
@@ -104,3 +104,4 @@ const Footer = () => {
 };
 
 export default Footer;
+
