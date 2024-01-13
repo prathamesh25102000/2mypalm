@@ -27,6 +27,23 @@
   margin-bottom: 0px;
 }
 
+@media (max-width:1300px) and (min-width:1115px) {
+  .featureCard{
+    padding: 18px 23px 26px 23px;
+  }
+}
+
+@media (max-width:1114px) and (min-width:1050px) {
+  .featureCard{
+    padding: 9px 11.5px 13px 11.5px;
+  }
+}
+
+@media (max-width:1050px) and (min-width:469px) {
+  .featureCard{
+    padding: 18px 23px 26px 23px;
+  }
+}
 @media (max-width: 468px) {
   .featureCard {
     display: flex;
@@ -48,3 +65,6 @@
     line-height: 16px;
   }
 }
+
+
+
