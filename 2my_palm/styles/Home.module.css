@@ -152,6 +152,23 @@
     padding-left: 17px;
     padding-right: 17px;
   }
+}
+
+@media (max-width:800px) {
+  .innerContainer{
+    display: block;
+  }
+
+  .mainContent {
+    width: 100%;
+    margin-right: 0px;
+  }
+
+  .sideImg {
+    display: flex;
+    justify-content: center;
+    margin-top: 19px;
+  }
 
 }
 
@@ -174,20 +191,10 @@
 
   .innerContainer {
     width: 100%;
-    display: block;
-  }
-
-  .sideImg {
-    margin-top: 19px;
   }
 
   .welcomeContainer {
     padding-top: 35px;
-  }
-
-  .mainContent {
-    width: 100%;
-    margin-right: 0px;
   }
 
   .subTitle,
@@ -195,11 +202,6 @@
   .text {
     padding-left: 17px;
     padding-right: 17px;
-  }
-
-  .sideImg {
-    display: flex;
-    justify-content: center;
   }
 
   .flex {

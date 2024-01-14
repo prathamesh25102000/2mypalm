@@ -72,14 +72,34 @@
   align-items: center;
 }
 
+@media (max-width:1130px) {
+  .grid{
+    grid-template-columns: auto;
+  }
+}
+
+@media (max-width:1050px) {
+  .container{
+    width: 100%;
+  }
+}
+
+@media (max-width:800px) {
+  .flex{
+    display:block
+  }
+
+  .innerDiv{
+    margin-top: 36px;
+  }
+}
+
 @media (max-width: 468px) {
   .container {
-    width: 100%;
     margin: 35px 0px 0px 0px;
   }
 
   .flex {
-    display: block;
     border-radius: 0px;
     padding: 0px;
   }
