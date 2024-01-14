@@ -4,16 +4,16 @@ import { routes } from "@/commons/constants";
 import logo from "../assets/logo.png";
 import Image from "next/image";
 import Link from "next/link";
-import { isMobileView } from "@/commons/constants";
 import MUIDrawer from "./Drawer";
 import { logAnalyticsEvent } from "@/analytics";
+import Window from "@/commons/windowDimensions";
 
 const Header = () => {
-  let isDesktopViewport: boolean = !isMobileView();
+  let showDesktopHeader: boolean = Window().width > 690;
 
   return (
     <>
-      {isDesktopViewport ? (
+      {showDesktopHeader ? (
         <div className={styles.headerContainer}>
           <div className={styles.header}>
             <Link

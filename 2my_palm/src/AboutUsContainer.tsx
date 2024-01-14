@@ -3,9 +3,12 @@ import aboutUsImg from "../assets/about_us_img.png";
 import styles from "../styles/AboutUs.module.css";
 import Image from "next/image";
 import { isMobileView } from "@/commons/constants";
+import Window from "@/commons/windowDimensions";
 
 const AboutUsContainer = () => {
   let isMobileViewport: boolean = isMobileView();
+  let windowWidth = Window().width;
+  let isTabViewport: boolean = windowWidth < 1200 && windowWidth > 469;
 
   return (
     <div className={styles.aboutUs}>
@@ -26,8 +29,8 @@ const AboutUsContainer = () => {
           <Image
             alt="about_us_image"
             src={aboutUsImg}
-            height={isMobileViewport ? 231 : 464}
-            width={isMobileViewport ? 316 : 585}
+            height={isMobileViewport ? 231 : isTabViewport ? 325 : 464}
+            width={isMobileViewport ? 316 : isTabViewport ? 410 : 585}
           />
         </div>
       </div>

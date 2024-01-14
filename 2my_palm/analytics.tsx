@@ -14,7 +14,7 @@ const firebaseConfig = {
 
 const app = initializeApp(firebaseConfig);
 
-export const logAnalyticsEvent = (eventName: string, payload: object) => {
+export const logAnalyticsEvent = (eventName: string, payload: any=null) => {
   if (app && typeof window !== "undefined") {
     let analytics: any = null;
     analytics = app?.name ? getAnalytics(app) : null;

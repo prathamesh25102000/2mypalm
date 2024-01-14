@@ -6,9 +6,7 @@ import styles from "../styles/TermsNConditions.module.css";
 import { termsAndConditions } from "@/commons/constants";
 import DoneIcon from "@mui/icons-material/Done";
 
-
 export default function TermsNconditions() {
-
   return (
     <>
       <div className={styles.page}>

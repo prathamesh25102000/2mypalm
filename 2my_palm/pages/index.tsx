@@ -103,8 +103,8 @@ export default function Home() {
               />
             </div>
           </div>
-        </div> */}
-        {/* <ManageYourAssets />
+        </div>
+        <ManageYourAssets />
         <FindServiceCenters />
         <GuaranteeRenewal />
         <FAQs />
@@ -113,4 +113,3 @@ export default function Home() {
     </>
   );
 }
-

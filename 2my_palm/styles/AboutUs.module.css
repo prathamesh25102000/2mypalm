@@ -48,6 +48,73 @@
   margin: 69px auto 50px auto;
 }
 
+@media (min-width: 800px) and (max-width: 1200px) {
+  .mainContent {
+    width: 57%;
+    padding-left: 17px;
+  }
+}
+
+@media (min-width: 469px) and (max-width: 1050px) {
+  .container {
+    width: 100%;
+  }
+
+  .textContent {
+    width: 100%;
+  }
+
+  .textContent .text {
+    padding-left: 17px;
+    padding-right: 17px;
+  }
+}
+
+@media (min-width:800px) and (max-width:1050px) {
+  .sideImg{
+    padding-right: 17px;
+    width:50%;
+  }
+}
+
+@media (min-width:710px) and (max-width:799px) {
+  .sideImg{
+    padding-right: 17px;
+    width:55%;
+  }
+
+  .mainContent{
+    width:40%;
+    padding-left: 17px;
+  }
+}
+
+@media (min-width:469px) and (max-width:709px) {
+  .sideImg{
+    padding-right: 17px;
+    width:100%;
+  }
+}
+
+@media (min-width:469px) and (max-width:708px) {
+  .container{
+    display: block;
+  }
+
+  .mainContent{
+    width:94%;
+    padding-left: 17px;
+    padding-right: 17px;
+    margin-right: 0px;
+  }
+
+  .sideImg{
+    display: flex;
+    justify-content: center;
+    padding-right: 0px;
+  }
+}
+
 @media (max-width: 468px) {
   .heading {
     font-size: 28px;
@@ -77,17 +144,17 @@
     margin-right: 0px;
   }
 
-  .aboutUs{
+  .aboutUs {
     padding: 38px 17px 0px 17px;
   }
 
-  .textContent{
+  .textContent {
     width: 100%;
     margin-top: 15px;
     margin-bottom: 26px;
   }
 
-  .textContentDiv{
+  .textContentDiv {
     padding-left: 17px;
     padding-right: 17px;
   }

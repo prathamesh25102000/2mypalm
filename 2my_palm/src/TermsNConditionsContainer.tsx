@@ -3,9 +3,12 @@ import img from "../assets/terms&conditions.png";
 import Image from "next/image";
 import styles from "../styles/TermsNConditions.module.css";
 import { isMobileView } from "@/commons/constants";
+import Window from "@/commons/windowDimensions";
 
 const TermsNConditionsContainer = () => {
   let isMobileViewport: boolean = isMobileView();
+  let windowWidth = Window().width;
+  let isTabViewport: boolean = windowWidth < 1200 && windowWidth > 469;
 
   return (
     <div className={styles.termsNConditions}>
@@ -26,8 +29,8 @@ const TermsNConditionsContainer = () => {
           <Image
             alt="terms_&_conditions_image"
             src={img}
-            height={isMobileViewport ? 219 : 415}
-            width={isMobileViewport ? 313 : 564}
+            height={isMobileViewport ? 219 : isTabViewport ? 290 : 415}
+            width={isMobileViewport ? 313 : isTabViewport ? 395 : 564}
             className={styles.sideImg}
           />
         </div>
