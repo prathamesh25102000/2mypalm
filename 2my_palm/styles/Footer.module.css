@@ -252,5 +252,9 @@
   .playStore{
     padding: 10px 11px;
   }
+
+  .innerContainer{
+    width:100%;
+  }
 }
 

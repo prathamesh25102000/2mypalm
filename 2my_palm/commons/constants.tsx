@@ -3,7 +3,7 @@ import Window from "./windowDimensions";
 export const routes = [
   {
     name: "Features",
-    path: "/",
+    path: "/#features",
   },
   {
     name: "About Us",
@@ -11,7 +11,7 @@ export const routes = [
   },
   {
     name: "FAQs",
-    path: "/",
+    path: "/#FAQs",
   },
 ];
 
@@ -34,13 +34,13 @@ export const companySectionLinks = [
   },
   {
     name: "FAQs",
-    path: "/",
+    path: "/#FAQs",
   },
 ];
 
 export const aboutUSTextLines = [
   "At 2mypalm, we believe in simplifying the way you engage with your electronic devices. Founded with a passion for seamless experiences, our mission is to empower users to effortlessly manage, protect, and optimize their valuable assets.",
-  `Whether you&apos;re checking guarantee and warranty status, finding service centers, or setting reminders for renewal, 2mypalm is your dedicated companion on the journey of hassle-free device ownership.`,
+  "Whether you\u2019re checking guarantee and warranty status, finding service centers, or setting reminders for renewal, 2mypalm is your dedicated companion on the journey of hassle-free device ownership.",
   "With a commitment to user-friendly interfaces and reliable solutions, we strive to redefine the relationship between users and their electronic investments.",
   "Welcome to a world where technology meets peace of mind—welcome to 2mypalm",
   "Driven by a vision to enhance your digital lifestyle, 2MyPalm goes beyond mere functionality. We are a team of tech enthusiasts and problem solvers dedicated to crafting an ecosystem that seamlessly integrates into your daily routine.",
@@ -147,7 +147,7 @@ export const guaranteeFeatures = [
   },
   {
     title: "Customizable Options",
-    subTitle: `Tailor reminders to suit your preferences, whether it&apos; days, weeks, or months before expiration.`,
+    subTitle: `Tailor reminders to suit your preferences, whether it\u2019 days, weeks, or months before expiration.`,
   },
   {
     title: "Comprehensive Coverage",
@@ -209,3 +209,11 @@ export const getPageTitle = (route: string) => {
   let currentPage: string = pathArray[len - 1];
   return route === "/" ? "Home" : currentPage;
 };
+
+export const scrollToSection=(element:HTMLElement | null)=>{
+  if(element){
+    element.scrollIntoView({
+      behavior:'auto',
+    })
+  }
+}

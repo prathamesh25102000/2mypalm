@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styles from "@/styles/Home.module.css";
 import Header from "@/src/Header";
 import Footer from "@/src/Footer";
@@ -14,6 +14,9 @@ import { isMobileView } from "@/commons/constants";
 import assetsIcon from "@/assets/manage_assets_icon.svg";
 import serviceCentersIcon from "@/assets/service_centers_icon.svg";
 import bellIcon from "@/assets/bell_icon.svg";
+import { scrollToSection } from "@/commons/constants";
+import { useRouter } from "next/router";
+import Window from "@/commons/windowDimensions";
 
 interface CardProps {
   icon: any;
@@ -24,6 +27,9 @@ interface CardProps {
 
 export default function Home() {
   let isMobileViewport: boolean = isMobileView();
+  let windowWidth: number = Window().width;
+  let isTabViewport: boolean = windowWidth < 550 && windowWidth > 468;
+  const router = useRouter();
 
   const featurecardsData = [
     {
@@ -64,6 +70,17 @@ export default function Home() {
       </div>
     );
   };
+  console.log(router);
+
+  useEffect(() => {
+    let currentPath = router?.asPath || "";
+    if (currentPath && currentPath.includes("#")) {
+      const element = document.getElementById(currentPath.substring(2));
+      if (element) {
+        scrollToSection(element);
+      }
+    }
+  }, [router.asPath]);
 
   return (
     <>
@@ -71,43 +88,47 @@ export default function Home() {
       <div className={styles.home}>
         <WelcomeContainer />
         <FeaturesSection />
-        <div className={styles.myPalmContainer}>
-          <div className={styles.flex}>
-            <div className={styles.choose2MyPalmContainer}>
-              <h2 className={styles.heading1}>Why Choose 2MyPalm?</h2>
-              <p className={styles.text}>
-                Revolutionize the way you own and interact with your electronic
-                companions. 2mypalm isn&apos;t just an app; it&apos;s a
-                lifestyle upgrade. From seamless asset tracking to timely
-                warranty reminders, discover the reasons to make 2mypalm your
-                digital ally.
-              </p>
-              <div className={styles.grid}>
-                {featurecardsData.map((item: any, ind: number) => (
-                  <FeatureCard
-                    icon={item.icon}
-                    height={item?.height || 0}
-                    width={item?.width || 0}
-                    textContent={item?.textContent || ""}
-                    key={ind}
-                  />
-                ))}
+        <div id="features">
+          <div className={styles.myPalmContainer}>
+            <div className={styles.flex}>
+              <div className={styles.choose2MyPalmContainer}>
+                <h2 className={styles.heading1}>Why Choose 2MyPalm?</h2>
+                <p className={styles.text}>
+                  Revolutionize the way you own and interact with your
+                  electronic companions. 2mypalm isn&apos;t just an app;
+                  it&apos;s a lifestyle upgrade. From seamless asset tracking to
+                  timely warranty reminders, discover the reasons to make
+                  2mypalm your digital ally.
+                </p>
+                <div className={styles.grid}>
+                  {featurecardsData.map((item: any, ind: number) => (
+                    <FeatureCard
+                      icon={item.icon}
+                      height={item?.height || 0}
+                      width={item?.width || 0}
+                      textContent={item?.textContent || ""}
+                      key={ind}
+                    />
+                  ))}
+                </div>
+              </div>
+              <div className={styles.imgDiv}>
+                <Image
+                  alt="why_choose_2mypalm"
+                  src={whyChoose2myPalmSectionImg}
+                  height={isMobileViewport ? 256 : isTabViewport ? 297 : 424}
+                  width={isMobileViewport ? 287 : isTabViewport ? 334 : 477}
+                />
               </div>
             </div>
-            <div className={styles.imgDiv}>
-              <Image
-                alt="why_choose_2mypalm"
-                src={whyChoose2myPalmSectionImg}
-                height={isMobileViewport ? 256 : 424}
-                width={isMobileViewport ? 287 : 477}
-              />
-            </div>
           </div>
+          <ManageYourAssets />
+          <FindServiceCenters />
+          <GuaranteeRenewal />
         </div>
-        <ManageYourAssets />
-        <FindServiceCenters />
-        <GuaranteeRenewal />
-        <FAQs />
+        <div id="FAQs">
+          <FAQs />
+        </div>
       </div>
       <Footer />
     </>

@@ -126,36 +126,62 @@
   letter-spacing: 0px;
 }
 
-@media (max-width:1400px) {
-  .choose2MyPalmContainer{
-    width: 53%;
+@media (max-width: 1400px) {
+  .mainContent {
+    width: 55%;
   }
 
-  .grid{
+  .innerContainer {
+    align-items: center;
+  }
+
+  .choose2MyPalmContainer {
+    width: 53%;
+    padding-left: 17px;
+  }
+
+  .grid {
     grid-template-columns: auto;
   }
 }
 
-@media (max-width:1400px) {
-  .mainContent{
-    width: 55%;
-  }
-
-  .innerContainer{
-    align-items: center;
-  }
-}
-
-@media (max-width:1050px) and (min-width:469px) {
-  .innerContainer{
-    width:100%;
+@media (min-width: 469px) and (max-width: 1050px) {
+  .innerContainer {
+    width: 100%;
     padding-left: 17px;
     padding-right: 17px;
   }
+
+  .myPalmContainer,
+  .choose2MyPalmContainer {
+    width: 100%;
+  }
+
+  .choose2MyPalmContainer {
+    padding-left: 0px;
+  }
 }
 
-@media (max-width:800px) {
-  .innerContainer{
+@media (max-width: 940px) {
+  .myPalmContainer .flex {
+    display: block;
+    padding-left: 17px;
+    padding-right: 17px;
+  }
+
+  .grid {
+    grid-template-columns: 330px 330px;
+  }
+
+  .imgDiv {
+    display: flex;
+    justify-content: center;
+    margin-top: 24px;
+  }
+}
+
+@media (max-width: 800px) {
+  .innerContainer {
     display: block;
   }
 
@@ -169,13 +195,22 @@
     justify-content: center;
     margin-top: 19px;
   }
+}
 
+@media (max-width: 720px) {
+  .grid {
+    grid-template-columns: 330px;
+  }
 }
 
 @media (max-width: 468px) {
   .subTitle {
     font-size: 11px;
     line-height: 13px;
+  }
+
+  .sideImg {
+    justify-content: flex-end;
   }
 
   .heading {
@@ -218,6 +253,8 @@
     padding-left: 17px;
     padding-right: 17px;
     margin-top: 17px;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 21px;
   }
 
   .imgDiv {
@@ -256,5 +293,21 @@
     width: 45px;
     border-radius: 8px;
   }
-}
 
+  .choose2MyPalmContainer {
+    width: 100%;
+    padding-left: 0px;
+  }
+
+  .heading1,
+  .text,
+  .grid {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+  .text{
+    text-align: justify;
+    text-justify: inter-word;
+  }
+}

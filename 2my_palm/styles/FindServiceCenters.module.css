@@ -33,9 +33,30 @@
   margin-right: 31px;
 }
 
-@media (max-width: 468px) {
+@media (max-width: 1050px) {
   .container {
     width: 100%;
+  }
+
+  .flex {
+    padding-left: 17px;
+    padding-right: 17px;
+  }
+}
+
+@media (max-width: 900px) {
+  .flex {
+    flex-direction: column;
+  }
+
+  .mainContent {
+    width: 100%;
+    margin-right: 0px;
+  }
+}
+
+@media (max-width: 468px) {
+  .container {
     margin-top: 31px;
   }
   .heading {
@@ -44,7 +65,6 @@
   }
 
   .mainContent {
-    width: 100%;
     margin-top: 8px;
   }
 
@@ -53,12 +73,6 @@
     line-height: 18px;
     margin-top: 0px;
     margin-bottom: 15px;
-  }
-
-  .flex {
-    display: block;
-    padding-left: 17px;
-    padding-right: 17px;
   }
 
   .imgDiv {

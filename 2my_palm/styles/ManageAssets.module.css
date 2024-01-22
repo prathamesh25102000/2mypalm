@@ -36,16 +36,36 @@
   text-justify: inter-word;
 }
 
-@media (max-width: 468px) {
+@media (max-width: 1050px) {
   .container {
     width: 100%;
-    margin: 36px auto 0px auto;
   }
 
   .flex {
-    display: block;
-    margin-left: 17px;
-    margin-right: 17px;
+    padding-left: 17px;
+    padding-right: 17px;
+  }
+
+  .img {
+    margin-right: 20px;
+  }
+}
+
+@media (min-width: 770px) and (max-width: 800px) {
+  .img {
+    margin-right: 0px;
+  }
+}
+
+@media (max-width: 769px) {
+  .flex {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 468px) {
+  .container {
+    margin: 36px auto 0px auto;
   }
 
   .img {
@@ -68,7 +88,7 @@
     margin-top: 8px;
   }
 
-  .secondaryText{
+  .secondaryText {
     font-size: 12px;
     line-height: 18px;
     margin-top: 10px;

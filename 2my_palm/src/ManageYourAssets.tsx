@@ -2,15 +2,15 @@ import React from "react";
 import manageYourAssetsImg from "../assets/manage_your_assets_image.png";
 import styles from "../styles/ManageAssets.module.css";
 import Image from "next/image";
-import { isMobileView } from "@/commons/constants";
+import Window from "@/commons/windowDimensions";
 
 const ManageYourAssets = () => {
-  let isDesktopViewport: boolean = !isMobileView();
+  let isTabViewport: boolean = Window().width<770;
 
   return (
     <div className={styles.container}>
       <div className={styles.flex}>
-        {isDesktopViewport && (
+        {!isTabViewport&& (
           <Image
             alt=""
             src={manageYourAssetsImg}
@@ -38,7 +38,7 @@ const ManageYourAssets = () => {
             </p>
           </div>
         </div>
-        {!isDesktopViewport && (
+        {isTabViewport && (
           <div className={styles.imgDiv}>
           <Image
             alt=""

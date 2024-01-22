@@ -35,11 +35,18 @@ export default function MUIDrawer() {
       setState({ ...state, [anchor]: open });
     };
 
+  const handleMenuElementClick=(anchor: Anchor, routeName:string="")=>{
+    toggleDrawer(anchor, false);
+    logAnalyticsEvent("pageView", { route: routeName });
+  }
+  
   const list = (anchor: Anchor) => (
     <Box
       sx={{ width: 230, height: "100%" }}
       role="presentation"
       className={styles.drawer}
+      onKeyDown={toggleDrawer(anchor, false)}
+      onClick={toggleDrawer(anchor, false)}
     >
       <button className={styles.btn} onClick={toggleDrawer(anchor, false)}>
         <CloseIcon className={styles.closeIcon} />
