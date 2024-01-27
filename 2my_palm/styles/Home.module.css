@@ -306,8 +306,13 @@
     padding-right: 0px;
   }
 
-  .text{
+  .text {
     text-align: justify;
     text-justify: inter-word;
+  }
+
+  .welcomeText {
+    padding-left: 17px;
+    padding-right: 17px;
   }
 }

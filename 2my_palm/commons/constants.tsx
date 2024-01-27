@@ -217,3 +217,9 @@ export const scrollToSection=(element:HTMLElement | null)=>{
     })
   }
 }
+
+export const appStoreUrl="https://apps.apple.com/in/app/zomato-food-delivery-dining/id434613896";
+
+export const playStoreUrl="https://play.google.com/store/apps/details?id=com.application.zomato&hl=en_IN&gl=US&pli=1";
+
+export const playStoreIcon="https://imagedelivery.net/5MYSbk45M80qAwecrlKzdQ/ffd03b6c-b240-4a0d-69ba-08879aa1db00/preview";

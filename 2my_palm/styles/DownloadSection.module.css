@@ -1,0 +1,235 @@
+.mainContainer {
+  background-color: var(--downloadSectionBgColor);
+  margin-top: 88px;
+  display: flex;
+  padding-top: 119px;
+  padding-bottom: 119px;
+  padding: 119px 10% 119px 10%;
+  justify-content: space-between;
+}
+
+.leftContainer {
+  width: 52%;
+}
+
+.header {
+  font-family: Roboto;
+  color: var(--primaryBackgroundColor);
+  font-weight: 700;
+  font-size: 54px;
+  line-height: 65px;
+  letter-spacing: 0px;
+}
+
+.subHeader {
+  font-family: Roboto;
+  color: var(--primaryBackgroundColor);
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 25px;
+  margin-top: 14px;
+  letter-spacing: 0px;
+}
+
+.downloadSection,
+.appStore,
+.playStore {
+  display: flex;
+  align-items: center;
+}
+
+.downloadSection {
+  margin-top: 37px;
+}
+
+.appStore,
+.playStore {
+  background-color: var(--primaryTextColor);
+  box-shadow: 0px 3px 6px var(--footerBoxShadowColor);
+  border-radius: 8px;
+}
+
+.appStore {
+  padding: 16px 30px 17px 27px;
+}
+
+.playStore {
+  padding: 16px 24px 17px 27px;
+}
+
+.appleIcon {
+  margin-right: 10px;
+  color: var(--primaryBackgroundColor);
+  height: 30px;
+  width: 24px;
+}
+
+.appStore {
+  margin-right: 32px;
+}
+
+.playStoreIcon {
+  margin-right: 7px;
+}
+
+.downloadText {
+  color: var(--primaryBackgroundColor);
+  letter-spacing: 0px;
+  font-family: Roboto;
+  font-size: 22px;
+  line-height: 27px;
+  margin: 3px 6px 0px 0px;
+  font-weight: 400;
+}
+
+.qrCodeSection {
+  display: flex;
+  align-items: center;
+  margin-top: 69px;
+}
+
+.qrCodeText {
+  color: var(--primaryBackgroundColor);
+  letter-spacing: 0px;
+  font-family: Roboto;
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 400;
+  margin-left: 11px;
+}
+
+.rightContainer {
+  position: relative;
+}
+
+.mobileImg {
+  position: absolute;
+  left: -390px;
+  top: -52px;
+}
+
+.link{
+  text-decoration: none;
+}
+
+@media (max-width: 1300px) {
+  .mainContainer {
+    padding-left: 17px;
+    padding-right: 17px;
+  }
+
+  .leftContainer {
+    width: fit-content;
+  }
+}
+
+@media (max-width: 1050px) {
+  .mainContainer {
+    flex-direction: column;
+    padding-bottom: 0px;
+  }
+
+  .leftContainer {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .mobileImg {
+    position: static;
+  }
+
+  .rightContainer {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 84px;
+    margin-bottom: -140px;
+  }
+}
+
+@media (max-width: 900px) {
+  .mainContainer {
+    justify-content: center;
+    padding-bottom: 0px;
+  }
+}
+
+@media (max-width: 635px) {
+  .leftContainer {
+    margin-left: 0px;
+  }
+}
+@media (min-width: 469px) and (max-width: 635px) {
+  .downloadSection {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  .appStore {
+    margin-bottom: 25px;
+    margin-right: 0px;
+  }
+}
+
+@media (max-width: 468px) {
+  .mainContainer {
+    padding-top: 26px;
+    padding-bottom: 70px;
+    margin-top: 40px;
+  }
+
+  .header {
+    font-size: 22px;
+    line-height: 24px;
+    display: inline-block;
+  }
+
+  .subHeader {
+    font-size: 12px;
+    line-height: 14px;
+    margin-top: 8px;
+  }
+
+  .downloadSection {
+    margin-top: 16px;
+  }
+
+  .appStore {
+    padding: 9px 16px 9px 13px;
+    margin-right: 15px;
+  }
+
+  .appleIcon {
+    width: 13px;
+    height: 16px;
+    margin-right: 5px;
+  }
+
+  .downloadText {
+    font-size: 10px;
+    line-height: 10px;
+    margin-top: 0px;
+  }
+
+  .playStore {
+    padding: 9px 14px 9px 13px;
+  }
+
+  .playStoreIcon {
+    width: 12px;
+    height: 13px;
+    margin-right: 4px;
+  }
+
+  .qrCodeSection {
+    margin-top: 24px;
+  }
+
+  .rightContainer {
+    margin-top: 42px;
+  }
+
+  .qrCodeText {
+    font-size: 12px;
+  }
+}

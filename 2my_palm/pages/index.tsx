@@ -17,6 +17,7 @@ import bellIcon from "@/assets/bell_icon.svg";
 import { scrollToSection } from "@/commons/constants";
 import { useRouter } from "next/router";
 import Window from "@/commons/windowDimensions";
+import DownloadSection from "@/src/DownloadSection";
 
 interface CardProps {
   icon: any;
@@ -70,7 +71,6 @@ export default function Home() {
       </div>
     );
   };
-  console.log(router);
 
   useEffect(() => {
     let currentPath = router?.asPath || "";
@@ -125,6 +125,9 @@ export default function Home() {
           <ManageYourAssets />
           <FindServiceCenters />
           <GuaranteeRenewal />
+        </div>
+        <div id="download">
+          <DownloadSection />
         </div>
         <div id="FAQs">
           <FAQs />

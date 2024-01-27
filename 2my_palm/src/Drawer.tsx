@@ -35,11 +35,11 @@ export default function MUIDrawer() {
       setState({ ...state, [anchor]: open });
     };
 
-  const handleMenuElementClick=(anchor: Anchor, routeName:string="")=>{
+  const handleMenuElementClick = (anchor: Anchor, routeName: string = "") => {
     toggleDrawer(anchor, false);
     logAnalyticsEvent("pageView", { route: routeName });
-  }
-  
+  };
+
   const list = (anchor: Anchor) => (
     <Box
       sx={{ width: 230, height: "100%" }}
@@ -52,7 +52,12 @@ export default function MUIDrawer() {
         <CloseIcon className={styles.closeIcon} />
       </button>
       <List>
-        <button className={styles.downloadBtn}>Download</button>
+        <Link
+          href="#download"
+          onClick={() => logAnalyticsEvent("downloadAction")}
+        >
+          <button className={styles.downloadBtn}>Download</button>
+        </Link>
         {routes.map((item: any, index: number) => (
           <ListItem key={index} disablePadding className={styles.ListItem}>
             <ListItemButton>

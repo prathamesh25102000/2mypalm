@@ -15,7 +15,7 @@ const WelcomeContainer = () => {
         <div className={styles.mainContent}>
           <p className={styles.subTitle}>Welcome To 2MyPalm</p>
           <h1 className={styles.heading}>Smart App to Manage Your Assets</h1>
-          <p className={styles.text}>
+          <p className={`${styles.text} ${styles.welcomeText}`}>
             Step into a realm where ownership becomes an art. 2mypalm empowers
             you to effortlessly manage, secure, and elevate your tech
             experience. Unleash control, embrace peace

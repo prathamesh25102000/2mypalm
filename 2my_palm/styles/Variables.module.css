@@ -3,10 +3,11 @@
   --downloadBtnColor: #efa048;
   --secondaryTextColor: #5e5e63;
   --subTitleColor: #1db3f0;
-  --highlightedSectionBgColor:#e9f9ff;
-  --primaryBackgroundColor:white;
-  --dividerColor:#D5D9E1;
-  --footerBoxShadowColor:#bebcbc29;
-  --iconDivBgColor:#C9F0FF;
-  --featureCardBgColor:#FFF0DE
+  --highlightedSectionBgColor: #e9f9ff;
+  --primaryBackgroundColor: white;
+  --dividerColor: #d5d9e1;
+  --footerBoxShadowColor: #bebcbc29;
+  --iconDivBgColor: #c9f0ff;
+  --featureCardBgColor: #fff0de;
+  --downloadSectionBgColor: #18b5ef;
 }

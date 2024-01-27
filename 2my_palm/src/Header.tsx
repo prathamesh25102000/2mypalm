@@ -51,12 +51,12 @@ const Header = () => {
                 ))}
               </ul>
             </div>
-            <button
-              className={styles.downloadBtn}
+            <Link
+              href="#download"
               onClick={() => logAnalyticsEvent("downloadAction")}
             >
-              Download
-            </button>
+              <button className={styles.downloadBtn}>Download</button>
+            </Link>
           </div>
         </div>
       ) : (
