@@ -52,7 +52,7 @@ const Header = () => {
               </ul>
             </div>
             <Link
-              href="#download"
+              href="/#download"
               onClick={() => logAnalyticsEvent("downloadAction")}
             >
               <button className={styles.downloadBtn}>Download</button>

@@ -168,34 +168,39 @@ export const guaranteeFeatures = [
 
 export const FAQS = [
   {
-    question: "How can I download the app?",
+    question: "1. What is 2MyPalm and how does it work?",
     answer:
-      "An App is a term to describe a web-based program. These web-based or mobile applications perform a specific task for the user. website where one can download these small programs for use on mobile devices such as a Smart phone.",
+      "2MyPalm is a product management app designed to help you organise and track your guaranteed and warranted products efficiently. It acts as a central hub for storing essential details about your purchases, warranties, and guarantees.",
   },
   {
-    question: "How can I download the app?",
+    question: "2. How do I add a new product to 2MyPalm?",
     answer:
-      "An App is a term to describe a web-based program. These web-based or mobile applications perform a specific task for the user. website where one can download these small programs for use on mobile devices such as a Smart phone.",
+      `Adding a new product to 2MyPalm is easy. Simply open the app, navigate to the "Add Asset” section, and enter the necessary details such as product name, purchase date, warranty information, and other relevant information.`,
   },
   {
-    question: "How can I download the app?",
+    question: "3. Can I customise warranty information for each product?",
     answer:
-      "An App is a term to describe a web-based program. These web-based or mobile applications perform a specific task for the user. website where one can download these small programs for use on mobile devices such as a Smart phone.",
+      "Yes, 2MyPalm allows you to customise warranty details for each product. You can specify the warranty duration, terms, and conditions associated with each item, ensuring accurate and personalised information.",
   },
   {
-    question: "How can I download the app?",
+    question: "4. How does 2MyPalm notify me of warranty expiration?",
     answer:
-      "An App is a term to describe a web-based program. These web-based or mobile applications perform a specific task for the user. website where one can download these small programs for use on mobile devices such as a Smart phone.",
+      "2MyPalm features a built-in notification system that sends timely reminders before your product warranties expire. You can customise these notifications in the app settings to suit your preferences.",
   },
   {
-    question: "How can I download the app?",
+    question: "5. What happens when my product's warranty is about to expire?",
     answer:
-      "An App is a term to describe a web-based program. These web-based or mobile applications perform a specific task for the user. website where one can download these small programs for use on mobile devices such as a Smart phone.",
+      "2MyPalm will send you a notification alerting you about the approaching warranty expiration. This allows you to take proactive measures, such as extending the warranty or contacting customer support, to address any potential issues.",
   },
   {
-    question: "How can I download the app?",
+    question: "6. How do I claim a warranty through 2MyPalm?",
     answer:
-      "An App is a term to describe a web-based program. These web-based or mobile applications perform a specific task for the user. website where one can download these small programs for use on mobile devices such as a Smart phone.",
+      "For warranty claims, 2MyPalm serves as a convenient reference. You can find all relevant warranty details and instructions in the app, guiding you on how to proceed with the warranty claim process with the manufacturer or retailer.",
+  },
+  {
+    question: "7. How can I contact support if I have  further questions or issues with 2MyPalm?",
+    answer:
+      `For any inquiries or issues, you can reach out to our customer support team through the "Contact Us" section within the 2MyPalm app. We are dedicated to providing assistance and ensuring a seamless user experience.`,
   },
 ];
 
@@ -210,16 +215,26 @@ export const getPageTitle = (route: string) => {
   return route === "/" ? "Home" : currentPage;
 };
 
-export const scrollToSection=(element:HTMLElement | null)=>{
-  if(element){
+export const scrollToSection = (element: HTMLElement | null) => {
+  if (element) {
     element.scrollIntoView({
-      behavior:'auto',
-    })
+      behavior: "instant",
+    });
   }
+};
+
+export const appStoreUrl =
+  "https://apps.apple.com/in/app/zomato-food-delivery-dining/id434613896";
+
+export const playStoreUrl =
+  "https://play.google.com/store/apps/details?id=com.application.zomato&hl=en_IN&gl=US&pli=1";
+
+export const playStoreIcon =
+  "https://imagedelivery.net/5MYSbk45M80qAwecrlKzdQ/ffd03b6c-b240-4a0d-69ba-08879aa1db00/preview";
+
+export const contactInfo={
+  'email':'reachus@4lotus.com',
+  'mobileNumber':'+91 86005 34655',
+  'address':'Pune, India, Maharashtra',
+  'facebookUrl':'https://www.facebook.com/4lotus'
 }
-
-export const appStoreUrl="https://apps.apple.com/in/app/zomato-food-delivery-dining/id434613896";
-
-export const playStoreUrl="https://play.google.com/store/apps/details?id=com.application.zomato&hl=en_IN&gl=US&pli=1";
-
-export const playStoreIcon="https://imagedelivery.net/5MYSbk45M80qAwecrlKzdQ/ffd03b6c-b240-4a0d-69ba-08879aa1db00/preview";

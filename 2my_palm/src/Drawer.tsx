@@ -35,11 +35,6 @@ export default function MUIDrawer() {
       setState({ ...state, [anchor]: open });
     };
 
-  const handleMenuElementClick = (anchor: Anchor, routeName: string = "") => {
-    toggleDrawer(anchor, false);
-    logAnalyticsEvent("pageView", { route: routeName });
-  };
-
   const list = (anchor: Anchor) => (
     <Box
       sx={{ width: 230, height: "100%" }}
@@ -53,7 +48,7 @@ export default function MUIDrawer() {
       </button>
       <List>
         <Link
-          href="#download"
+          href={"/#download"}
           onClick={() => logAnalyticsEvent("downloadAction")}
         >
           <button className={styles.downloadBtn}>Download</button>

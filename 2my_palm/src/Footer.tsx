@@ -12,6 +12,7 @@ import AppleIcon from "@mui/icons-material/Apple";
 import { isMobileView } from "@/commons/constants";
 import playStoreIcon from "../assets/playStore_icon.svg";
 import { logAnalyticsEvent } from "@/analytics";
+import { contactInfo } from "@/commons/constants";
 
 const Footer = () => {
   let isMobileViewport: boolean = isMobileView();
@@ -64,9 +65,14 @@ const Footer = () => {
             </div>
             <div>
               <h3 className={styles.title}>Get In Touch</h3>
-              <p className={styles.footerText}>Support@2mypalm.com</p>
-              <p className={styles.footerText}> +91 9876543210</p>
-              <p className={styles.footerText}> Address goes here</p>
+              <p className={styles.footerText}>{contactInfo?.email || ""}</p>
+              <p className={styles.footerText}>
+                {contactInfo?.mobileNumber || ""}
+              </p>
+              <Link href={contactInfo?.facebookUrl || "/"} target="_blank" className={styles.footerText}>
+                {contactInfo?.facebookUrl || ""}
+              </Link>
+              <p className={styles.footerText}>{contactInfo?.address || ""}</p>
             </div>
           </div>
           <div className={styles.footerContainer}>
@@ -104,4 +110,3 @@ const Footer = () => {
 };
 
 export default Footer;
-

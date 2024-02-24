@@ -312,7 +312,7 @@
   }
 
   .welcomeText {
-    padding-left: 17px;
-    padding-right: 17px;
+    padding-left: 17px !important;
+    padding-right: 17px !important;
   }
 }

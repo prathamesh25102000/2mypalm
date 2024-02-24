@@ -17,13 +17,16 @@ const PrivacyPolicyContainer = () => {
         <div className={styles.mainContent}>
           <h1 className={styles.heading}>Privacy & Policy</h1>
           <p className={styles.text}>
-            At 2MyPalm, we take your privacy seriously. Our commitment is to
-            ensure the security and confidentiality of any personal information
-            you provide.
+            Thank you for choosing 2MyPalm, an app designed to manage the
+            lifecycle of your guaranteed and warranted products. We understand
+            the importance of your privacy, and we are committed to protecting
+            the information you provide. This Privacy Policy outlines the types
+            of personal information we collect, how we use it, and the measures
+            we take to safeguard your data.
           </p>
           <p className={styles.text}>
-            We collect only the necessary data required to enhance your
-            experience with our app.
+            By using the 2MyPalm app, you agree to the terms outlined in this
+            Privacy Policy.
           </p>
         </div>
         <div className={styles.sideImg}>

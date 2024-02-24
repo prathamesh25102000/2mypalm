@@ -74,6 +74,7 @@ export default function Home() {
 
   useEffect(() => {
     let currentPath = router?.asPath || "";
+
     if (currentPath && currentPath.includes("#")) {
       const element = document.getElementById(currentPath.substring(2));
       if (element) {
