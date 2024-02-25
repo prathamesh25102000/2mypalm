@@ -36,6 +36,9 @@
   height: 36px;
   width: 36px;
   margin-right: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .facebookIcon {
   width: 18px;
