@@ -57,18 +57,44 @@
   margin-bottom: 0px;
 }
 
-.secondaryHeading {
+.primaryText {
+  color: var(--primaryTextColor);
+  letter-spacing: 0px;
+  font-weight: 800;
+  font-size: 28px;
+  line-height: 30px;
+  font-family: Roboto;
+  margin-top: 45px;
+  margin-bottom: 0px;
+}
+.secondaryHeading,
+.detailsText {
   color: var(--secondaryTextColor);
   letter-spacing: 0px;
   font-weight: normal;
   font-size: 16px;
   line-height: 20px;
   font-family: Roboto;
-  margin-left: 38px;
   margin-top: 12px;
   margin-bottom: 0px;
 }
 
+.secondaryHeading {
+  margin-left: 38px;
+}
+
+.detailsText {
+  margin-left: 17px;
+}
+
+.secondaryText {
+  color: var(--secondaryTextColor);
+  letter-spacing: 0px;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 20px;
+  font-family: Roboto;
+}
 .flex {
   display: flex;
   align-items: center;
@@ -85,7 +111,7 @@
 }
 
 .policy {
-  margin-top: 41px;
+  margin-top: 35px;
 }
 
 .footerText {
@@ -126,51 +152,51 @@
     width: 100%;
   }
 
-  .textContentDiv{
+  .textContentDiv {
     padding-left: 17px;
     padding-right: 17px;
   }
 }
 
-@media (min-width:800px) and (max-width:1050px) {
-  .sideImg{
+@media (min-width: 800px) and (max-width: 1050px) {
+  .sideImg {
     padding-right: 17px;
-    width:50%;
+    width: 50%;
   }
 }
 
-@media (min-width:710px) and (max-width:799px) {
-  .sideImg{
+@media (min-width: 710px) and (max-width: 799px) {
+  .sideImg {
     padding-right: 17px;
-    width:55%;
+    width: 55%;
   }
 
-  .mainContent{
-    width:40%;
+  .mainContent {
+    width: 40%;
     padding-left: 17px;
   }
 }
 
-@media (min-width:469px) and (max-width:709px) {
-  .sideImg{
+@media (min-width: 469px) and (max-width: 709px) {
+  .sideImg {
     padding-right: 17px;
-    width:100%;
+    width: 100%;
   }
 }
 
-@media (min-width:469px) and (max-width:708px) {
-  .container{
+@media (min-width: 469px) and (max-width: 708px) {
+  .container {
     display: block;
   }
 
-  .mainContent{
-    width:94%;
+  .mainContent {
+    width: 94%;
     padding-left: 17px;
     padding-right: 17px;
     margin-right: 0px;
   }
 
-  .sideImg{
+  .sideImg {
     display: flex;
     justify-content: center;
     padding-right: 0px;
@@ -184,6 +210,16 @@
     margin-bottom: 8px;
   }
 
+  .primaryText{
+    font-size: 22px;
+    line-height: 25px;
+    margin-top: 27px;
+  }
+
+  .secondaryText{
+    font-size: 12px;
+    line-height: 18px;
+  }
   .text {
     font-size: 12px;
     line-height: 16px;
@@ -226,25 +262,33 @@
     line-height: 22px;
   }
 
-  .secondaryHeading {
+  .secondaryHeading,
+  .detailsText {
     margin-top: 5px;
     font-size: 12px;
     line-height: 25px;
     text-align: justify;
     text-justify: inter-word;
+  }
+
+  .secondaryHeading {
     margin-left: 30px;
   }
 
+  .detailsText {
+    margin-left: 14px;
+  }
   .checkIcon {
     height: 20px;
     width: 20px;
   }
 
-  .policy{
+  .policy {
     margin-top: 20px;
   }
 
-  .footerText, .email{
+  .footerText,
+  .email {
     font-size: 12px;
     line-height: 18px;
     margin-top: 14px;

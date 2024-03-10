@@ -98,39 +98,24 @@ export const termsAndConditions = [
 
 export const privacyPolicies = [
   {
-    title: "Information Collection",
+    title: "Location Information",
     subTitle:
-      "We collect essential information to provide you with a seamless experience and improve our services. This may include personal details, device information, and usage patterns.",
+      "If you choose to enable location services, we will collect and use your current location to enhance your experience within the app. And search for service Centers. This information is solely used to associate products with specific locations and is not shared with third parties.",
   },
   {
-    title: "Usage of Information",
+    title: "Data Security",
     subTitle:
-      "Your data is utilized to personalize your experience, enhance customer support, and optimize our services. We do not sell, trade, or transfer your personally identifiable information to external parties.",
+      "We take appropriate measures to safeguard your personal information, including encryption, secure data storage, and access controls. However, no method of transmission over the internet or electronic storage is entirely secure. Therefore, while we strive to protect your information, we cannot guarantee its absolute security.",
   },
   {
-    title: "Security Measures",
+    title: "Third-Party Access",
     subTitle:
-      "Navigate our intuitive interface with ease to manage and monitor renewal reminders effortlessly.",
+      "We do not sell, trade, or otherwise transfer your personal information to third parties without your consent, except as set forth in this Privacy Policy or when required by law.",
   },
   {
-    title: "Third-Party Services",
+    title: "Your Choices",
     subTitle:
-      "Our app may contain links to third-party websites or services. Please be aware that we are not responsible for their content or privacy practices.",
-  },
-  {
-    title: "Cookies",
-    subTitle:
-      "Cookies may be used to enhance your experience. You can choose to disable cookies, but this may impact certain functionalities.",
-  },
-  {
-    title: "User Control",
-    subTitle:
-      "You have the right to access, correct, or delete your personal information. Contact us for assistance with these requests.",
-  },
-  {
-    title: "Policy Updates",
-    subTitle:
-      "Our privacy policy may be updated periodically. We recommend checking this page for the latest information.",
+      "You have the right to access, correct, or delete your personal information. You may also choose to disable location services within the app. If you have any questions or concerns regarding your privacy, please contact us at [reachus@4lotus.com / +91 86005 34655 ].",
   },
 ];
 
@@ -174,8 +159,7 @@ export const FAQS = [
   },
   {
     question: "2. How do I add a new product to 2MyPalm?",
-    answer:
-      `Adding a new product to 2MyPalm is easy. Simply open the app, navigate to the "Add Asset” section, and enter the necessary details such as product name, purchase date, warranty information, and other relevant information.`,
+    answer: `Adding a new product to 2MyPalm is easy. Simply open the app, navigate to the "Add Asset” section, and enter the necessary details such as product name, purchase date, warranty information, and other relevant information.`,
   },
   {
     question: "3. Can I customise warranty information for each product?",
@@ -198,9 +182,9 @@ export const FAQS = [
       "For warranty claims, 2MyPalm serves as a convenient reference. You can find all relevant warranty details and instructions in the app, guiding you on how to proceed with the warranty claim process with the manufacturer or retailer.",
   },
   {
-    question: "7. How can I contact support if I have  further questions or issues with 2MyPalm?",
-    answer:
-      `For any inquiries or issues, you can reach out to our customer support team through the "Contact Us" section within the 2MyPalm app. We are dedicated to providing assistance and ensuring a seamless user experience.`,
+    question:
+      "7. How can I contact support if I have  further questions or issues with 2MyPalm?",
+    answer: `For any inquiries or issues, you can reach out to our customer support team through the "Contact Us" section within the 2MyPalm app. We are dedicated to providing assistance and ensuring a seamless user experience.`,
   },
 ];
 
@@ -232,9 +216,53 @@ export const playStoreUrl =
 export const playStoreIcon =
   "https://imagedelivery.net/5MYSbk45M80qAwecrlKzdQ/ffd03b6c-b240-4a0d-69ba-08879aa1db00/preview";
 
-export const contactInfo={
-  'email':'reachus@4lotus.com',
-  'mobileNumber':'+91 86005 34655',
-  'address':'Pune, India, Maharashtra',
-  'facebookUrl':'https://www.facebook.com/4lotus'
-}
+export const contactInfo = {
+  email: "reachus@4lotus.com",
+  mobileNumber: "+91 86005 34655",
+  address: "Pune, India, Maharashtra",
+  facebookUrl: "https://www.facebook.com/4lotus",
+};
+
+export const collectedInformation = [
+  {
+    name: "Personal Information",
+    details: ["Name", "Phone Number", "Email Address"],
+  },
+  {
+    name: "Product Details",
+    details: ["Product Name", "Brand", "Price", "Place of Purchase"],
+  },
+  {
+    name: "Location Information",
+    details: [
+      "Current Location (only if you choose to enable location services)",
+    ],
+  },
+];
+
+export const usedInformation = [
+  {
+    name: "Product Management",
+    details: [
+      "To organize and manage the lifecycle of your guaranteed and warranted products.",
+    ],
+  },
+  {
+    name: "Communication",
+    details: [
+      "To send you updates, notifications, and important information related to your registered products.",
+    ],
+  },
+  {
+    name: "Customer Support",
+    details: [
+      "To provide assistance and support regarding any issues or inquiries you may have.",
+    ],
+  },
+  {
+    name: "Improvement of Services",
+    details: [
+      "To analyze user behaviour and feedback, helping us enhance and improve the app's functionality.",
+    ],
+  },
+];

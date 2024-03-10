@@ -6,7 +6,11 @@ import FacebookOutlinedIcon from "@mui/icons-material/FacebookOutlined";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import { companySectionLinks } from "@/commons/constants";
+import {
+  appStoreUrl,
+  companySectionLinks,
+  playStoreUrl,
+} from "@/commons/constants";
 import Link from "next/link";
 import AppleIcon from "@mui/icons-material/Apple";
 import { isMobileView } from "@/commons/constants";
@@ -69,7 +73,11 @@ const Footer = () => {
               <p className={styles.footerText}>
                 {contactInfo?.mobileNumber || ""}
               </p>
-              <Link href={contactInfo?.facebookUrl || "/"} target="_blank" className={styles.footerText}>
+              <Link
+                href={contactInfo?.facebookUrl || "/"}
+                target="_blank"
+                className={styles.footerText}
+              >
                 {contactInfo?.facebookUrl || ""}
               </Link>
               <p className={styles.footerText}>{contactInfo?.address || ""}</p>
@@ -77,20 +85,40 @@ const Footer = () => {
           </div>
           <div className={styles.footerContainer}>
             <div className={styles.downloadSection}>
-              <div className={styles.appStore}>
-                <AppleIcon className={styles.AppleIcon} />
-                <p className={styles.downloadText}>Download for iOS</p>
-              </div>
-              <div className={styles.playStore}>
-                <Image
-                  src={playStoreIcon}
-                  alt={""}
-                  height={18}
-                  width={16}
-                  className={styles.playStoreIcon}
-                />
-                <p className={styles.downloadText}>Download for Android</p>
-              </div>
+              <Link
+                href={appStoreUrl}
+                target="_blank"
+                className={styles.link}
+                onClick={() =>
+                  logAnalyticsEvent("downloadAction", { platform: "app store" })
+                }
+              >
+                <div className={styles.appStore}>
+                  <AppleIcon className={styles.AppleIcon} />
+                  <p className={styles.downloadText}>Download for iOS</p>
+                </div>
+              </Link>
+              <Link
+                href={playStoreUrl}
+                target="_blank"
+                className={styles.link}
+                onClick={() =>
+                  logAnalyticsEvent("downloadAction", {
+                    platform: "play store",
+                  })
+                }
+              >
+                <div className={styles.playStore}>
+                  <Image
+                    src={playStoreIcon}
+                    alt={""}
+                    height={18}
+                    width={16}
+                    className={styles.playStoreIcon}
+                  />
+                  <p className={styles.downloadText}>Download for Android</p>
+                </div>
+              </Link>
             </div>
             {!isMobileViewport && (
               <p className={styles.copyrightText}>
